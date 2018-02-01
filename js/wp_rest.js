@@ -15,7 +15,7 @@
         console.log('COMPLETE');
       },
       success: function(myData) {
-        // displayWP(myData);
+        displayWP(myData);
         console.log(myData);
       },
       error: function() {
@@ -23,9 +23,19 @@
       }
     });
 
-
     function displayWP(myData) {
 
+      for (var i = 0; i < myData.length; i++) {
+        var wpTitle = myData[i].title.rendered;
+        var wpContent = myData[i].content.rendered;
+        // console.log(myData[i].content.rendered);
+        if (myData[i]._embedded['wp:featuredmedia']) {
+          var wpPicture = myData[i]._embedded['wp:featuredmedia'];
+          // for (var i2 = 0; i < wpPicture.length; i2++) {
+          // var wpPicture[i2]
+          // }
+        }
+      }
     }
 
 
