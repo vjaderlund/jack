@@ -15,7 +15,7 @@
       },
       success: function(myData) {
         displayWP(myData);
-        console.log(myData);
+        // console.log(myData);
       },
       error: function() {
         console.log('ERROR');
@@ -31,7 +31,7 @@
           var wpPicture = myData[i]._embedded['wp:featuredmedia'];
 
           //2a loopen för att få url till bild i hög upplösning
-          for (var i2 = 0; i < wpPicture.length; i2++) {
+          for (var i2 = 0; i2 < wpPicture.length; i2++) {
 
             var wpPic = wpPicture[i2].media_details.sizes.medium_large.source_url;
 
